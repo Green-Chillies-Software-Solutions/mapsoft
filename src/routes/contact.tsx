@@ -54,11 +54,29 @@ function ContactPage() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
-  const onSubmit = async () => {
-    await new Promise((r) => setTimeout(r, 700));
-    setSent(true);
-    reset();
-    setTimeout(() => setSent(false), 6000);
+  const onSubmit = async (data: FormValues) => {
+    try {
+      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyrGRKyzLc-WYEUTe3kAediipPlls1fP-qSl5aonxtQ-_IuwjJV4mBO1Be1KkYGTYMWQA/exec";
+
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // <-- This tells the browser to skip CORS checks
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(data),
+      });
+
+      // With no-cors, the response is "opaque" so we can't check response.ok.
+      // If the fetch doesn't throw a network error, it succeeded!
+      setSent(true);
+      reset();
+      setTimeout(() => setSent(false), 6000);
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Optional: Add some error state UI here if needed
+    }
   };
 
   return (
