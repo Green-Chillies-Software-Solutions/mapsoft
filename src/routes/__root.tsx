@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { MotionConfig } from "motion/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -149,6 +150,7 @@ function RootComponent() {
         <Footer />
         <WhatsAppButton />
         <ScrollToTopButton />
+        <Analytics />
       </QueryClientProvider>
     </MotionConfig>
   );
