@@ -549,31 +549,39 @@ export const technologies = [
 
 export const testimonials = [
   {
-    name: "Saul Goodman",
-    role: "CEO & Founder",
+    title: "Ongoing IT Support and Maintenance",
+    name: "Jeffery William",
+    role: "COO",
     quote:
-      "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.",
+      "We value a technology partner who understands our requirements and responds constructively to technical challenges. Mapsoft Technologies focuses on practical solutions, application improvements, and maintaining software that supports our business needs.",
   },
   {
-    name: "Sara Wilsson",
+    title: "Web Application Development",
+    name: "Sara Wilson",
     role: "Designer",
     quote:
-      "Export tempor illum tamen malis malis eram quae irure esse labore.",
+      "The team at Mapsoft Technologies worked to understand our application requirements and business processes. Their focus on functionality and a user-friendly interface helped us move toward a more organized and efficient digital workflow.",
   },
   {
+    title: "Mobile Application Development",
     name: "Jena Karlis",
     role: "Store Owner",
-    quote: "Enim nisi quem export duis labore cillum magna enim sint.",
+    quote:
+      "Mapsoft Technologies understood our vision for a mobile application and helped us shape it into a practical digital solution. Their attention to application functionality and user experience was valuable throughout the development process.",
   },
   {
-    name: "Matt Brandon",
-    role: "Freelancer",
-    quote: "Fugiat enim eram quae cillum dolore dolor amet nulla culpa.",
+    title: "Cloud ERP Implementation",
+    name: "Ian Pereira",
+    role: "CEO & Director",
+    quote:
+      "Manish from Mapsoft Technologies provided a customized ERP solution aligned with our business requirements. The system helped us streamline our business processes, improve data visibility, and manage our daily operations more efficiently. The team was supportive throughout the implementation.",
   },
   {
+    title: "Custom Software Development",
     name: "John Larson",
     role: "Entrepreneur",
-    quote: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua.",
+    quote:
+      "We needed software tailored to our specific business workflow, and Mapsoft Technologies helped us translate our requirements into a practical solution. Their technical approach and willingness to understand our needs made the development process more structured.",
   },
 ];
 
