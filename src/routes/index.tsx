@@ -220,13 +220,133 @@ function Bento() {
 }
 
 /* ── Scroll-lit statement ──────────────────────────────────────── */
+const differentiators = [
+  {
+    title: "Customized Solutions for Your Business",
+    description:
+      "We develop software tailored to your specific business requirements, workflows, and operational goals, ensuring that technology works the way your business needs it to.",
+  },
+  {
+    title: "Industry-Focused Expertise",
+    description:
+      "Our experience across manufacturing, distribution, healthcare, and other industries enables us to understand business challenges and deliver relevant, practical technology solutions.",
+  },
+  {
+    title: "Skilled Technical Professionals",
+    description:
+      "Our team of software developers, designers, testers, and project managers works collaboratively to build reliable, high-quality applications using appropriate technologies and development practices.",
+  },
+  {
+    title: "Cost-Effective Development",
+    description:
+      "Our flexible outsourcing models and dedicated development teams help businesses optimize development costs while accessing specialized technical expertise.",
+  },
+  {
+    title: "Quality-Driven Approach",
+    description:
+      "We emphasize quality assurance, functional testing, performance, and reliability throughout the development lifecycle to deliver software that meets defined requirements.",
+  },
+  {
+    title: "Scalable and Future-Ready Technology",
+    description:
+      "We build solutions with scalability and maintainability in mind, helping businesses adapt to changing requirements, growing workloads, and evolving technology trends.",
+  },
+  {
+    title: "Transparent Communication and Project Management",
+    description:
+      "We believe in clear communication, collaborative planning, regular progress updates, and structured project management to keep projects aligned with client expectations.",
+  },
+  {
+    title: "Reliable Support and Maintenance",
+    description:
+      "Our engagement does not end with deployment. We provide ongoing maintenance, troubleshooting, updates, and enhancements to help keep applications running smoothly.",
+  },
+  {
+    title: "End-to-End Software Services",
+    description:
+      "From consultation and planning to design, development, testing, deployment, and maintenance, we provide comprehensive software services under one roof.",
+  },
+  {
+    title: "Long-Term Technology Partnership",
+    description:
+      "We aim to build lasting relationships with our clients by understanding their business objectives, responding to changing needs, and continuously improving their digital capabilities.",
+  },
+];
+
 function Statement() {
   return (
     <Section className="py-28">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-5xl">
         <p className="kicker mb-8">Why Mapsoft</p>
-        <ScrollText text="We design, build and support the systems businesses run on every single day — web, commerce, mobile and the data behind them." />
+
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div>
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+              Why Choose Mapsoft Technologies?
+            </h1>
+          </div>
+
+          <div className="space-y-5 text-base leading-relaxed text-slate-600 dark:text-slate-300 lg:pt-2">
+            <p>
+              At Mapsoft Technologies, we combine technology, innovation, and
+              industry expertise to deliver software solutions that help
+              businesses grow, operate efficiently, and stay ahead in a
+              competitive marketplace. We understand that every business has
+              unique challenges, which is why we focus on developing customized,
+              scalable, and reliable technology solutions aligned with your
+              business goals.
+            </p>
+            <p>
+              From custom software development and cloud-based ERP solutions to
+              web and mobile applications, AI-enabled CRM systems, and dedicated
+              development teams, we are committed to transforming your ideas
+              into practical, result-oriented digital solutions.
+            </p>
+          </div>
+        </div>
+
+        <h2 className="mt-20 text-3xl font-semibold tracking-tight">
+          What Makes Us Different?
+        </h2>
+
+        <div className="mt-10 space-y-8">
+          {differentiators.map((item, index) => (
+            <div
+              key={item.title}
+              className={`flex flex-col gap-5 border-t border-slate-200 pt-7 dark:border-slate-800 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse md:text-right" : ""
+                }`}
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-300 text-sm font-semibold dark:border-slate-700">
+                {index + 1}
+              </div>
+
+              <div className="max-w-3xl">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 leading-relaxed text-slate-600 dark:text-slate-300">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mx-auto mt-20 max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Our Commitment
+          </h2>
+          <p className="mt-5 leading-relaxed text-slate-600 dark:text-slate-300">
+            At Mapsoft Technologies, your business goals are at the heart of
+            everything we do. We strive to simplify complex processes, improve
+            operational efficiency, enhance customer experiences, and create
+            measurable business value through technology.
+          </p>
+          <p className="mt-8 text-lg font-semibold">
+            Mapsoft Technologies — Your Trusted Partner for Innovative,
+            Reliable, and Scalable Software Solutions.
+          </p>
+        </div>
       </div>
+
       <div className="mt-14">
         <ProgressRule />
       </div>
@@ -406,13 +526,6 @@ function Home() {
   return (
     <>
       <Hero />
-
-      <div className="border-y border-border py-2.5">
-        <TextMarquee
-          text="Custom Software · Mobile · Cloud · QA"
-          className="font-normal text-[2px] md:text-xs"
-        />
-      </div>
 
       <Bento />
       <Statement />

@@ -602,8 +602,8 @@ export const portfolio: PortfolioItem[] = [
 
 export const team = [
   { name: "Manish Yengantiwar", role: "CEO", detail: "Chief Executive Officer", initials: "MY" },
-  { name: "Prrasad Patill", role: "COO", detail: "Chief Operating Officer", initials: "PP" },
-  { name: "Sandeep Ghatge", role: "Team Lead", detail: "Software Development", initials: "SG" },
+  { name: "Prrasad Patill", role: "CMO", detail: "Chief Marketing Officer", initials: "PP" },
+  { name: "Sandeep Ghatge", role: "CTO", detail: "Chief Technical Officer", initials: "SG" },
 ];
 
 export const faqs = [
