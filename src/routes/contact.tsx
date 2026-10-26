@@ -299,7 +299,7 @@ function ContactPage() {
               {isMounted && (
                 <div className="flex flex-col gap-1 py-2">
                   <ReCAPTCHA
-                    sitekey="6LeFvQEuAAAAABDyvVzS-2TimcEiEzfRg7cTg9cz"
+                    sitekey="6LfmxQEuAAAAADBPbX-ghDkQSTopOe_3bBtbQ9m1"
                     onChange={(token) => {
                       setCaptchaToken(token);
                       if (token) setCaptchaError(false);
