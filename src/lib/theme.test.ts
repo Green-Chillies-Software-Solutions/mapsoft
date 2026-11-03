@@ -3,8 +3,8 @@ import { strictEqual } from "node:assert";
 import { oppositeTheme, resolveTheme } from "./theme";
 
 describe("visitor theme preference", () => {
-  test("defaults to dark without a saved preference", () => {
-    strictEqual(resolveTheme(null), "dark");
+  test("defaults to light without a saved preference", () => {
+    strictEqual(resolveTheme(null), "light");
   });
   test("restores a saved light preference", () => {
     strictEqual(resolveTheme("light"), "light");

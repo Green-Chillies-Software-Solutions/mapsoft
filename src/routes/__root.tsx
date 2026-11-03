@@ -24,6 +24,13 @@ import {
   WhatsAppButton,
 } from "@/components/layout/Chrome";
 
+/**
+ * Runs in <head> before hydration.
+ * Light is the default — only an explicit "dark" saved by the user
+ * puts the site in dark mode. Mirrors resolveTheme() in lib/theme.ts.
+ */
+const themeInit = `(function(){try{if(localStorage.getItem("mapsoft-theme")==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -110,6 +117,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
+    // Runs before hydration so a returning dark-mode user never
+    // sees a light flash; first-time visitors get light (default).
+    scripts: [{ children: themeInit }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -119,7 +129,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

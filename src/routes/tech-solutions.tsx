@@ -58,10 +58,6 @@ function TechSolutions() {
         text="One technology partner for IT support, cloud infrastructure, cybersecurity, AI automation and custom software — engineered for reliability and built to scale."
       />
 
-      <div className="border-y border-border py-6">
-        <TextMarquee text="IT Support · Cloud · Cybersecurity · AI · IoT · SaaS" />
-      </div>
-
       <Section>
         <SectionHeader
           kicker="What We Deliver"
@@ -73,8 +69,8 @@ function TechSolutions() {
             <StaggerItem key={p.title} className="h-full">
               <article className="group card-elevated sheen flex h-full flex-col overflow-hidden p-8">
                 <div className="-mx-8 -mt-8 mb-6 h-48 overflow-hidden">
-                <img src={pillarImgs[i]} alt={p.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
-              </div>
+                  <img src={pillarImgs[i]} alt={p.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110" />
+                </div>
                 <span className="font-mono text-[0.65rem] tracking-[0.3em] text-brand-2">
                   {String(i + 1).padStart(2, "0")}
                 </span>

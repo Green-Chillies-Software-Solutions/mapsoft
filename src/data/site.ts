@@ -601,9 +601,23 @@ export const portfolio: PortfolioItem[] = [
 ];
 
 export const team = [
+  // Leadership
   { name: "Manish Yengantiwar", role: "CEO", detail: "Chief Executive Officer", initials: "MY" },
   { name: "Prrasad Patill", role: "CMO", detail: "Chief Marketing Officer", initials: "PP" },
   { name: "Sandeep Ghatge", role: "CTO", detail: "Chief Technical Officer", initials: "SG" },
+
+  // Mapsoft Technologies Team
+  { name: "Vrushali Bannur", role: "BI Developer", detail: "Business Intelligence Developer", initials: "VB" },
+  { name: "Madan Patil", role: "QA (Manual)", detail: "Quality Analyst (Manual)", initials: "MP" },
+  { name: "Shevanta Chandane", role: "Sr. Developer", detail: "Sr. Software Developer", initials: "SC" },
+  { name: "Ravikumar Lubdhi", role: "QA Automation", detail: "QA Automation Engineer", initials: "RL" },
+  { name: "Amol Sarjerao Pujari", role: "Team Lead", detail: "Team Lead (Development)", initials: "ASP" },
+  { name: "Gaurao Rameshrao Gharat", role: "DevOps/DB Engineer", detail: "DevOps and Database Engineer", initials: "GRG" },
+  { name: "Anurag Chaudhari", role: "DevOps/DB Engineer", detail: "DevOps and Database Engineer", initials: "AC" },
+  { name: "Sagar Shendage", role: "Tech Support", detail: "Technical Support Engineer", initials: "SS" },
+  { name: "Saichandan Yenugwar", role: "Developer", detail: "Software Developer", initials: "SY" },
+  { name: "Shyam Rajegore", role: "Developer", detail: "Software Developer", initials: "SR" },
+  { name: "Sandip Mahadev Punalkar", role: "Developer", detail: "Software Developer", initials: "SMP" },
 ];
 
 export const faqs = [
