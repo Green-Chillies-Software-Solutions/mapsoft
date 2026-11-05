@@ -28,10 +28,11 @@ export const Route = createFileRoute("/team")({
   component: TeamPage,
 });
 
-export function TeamGrid() {
+export function TeamGrid({ limit }: { limit?: number } = {}) {
+  const members = typeof limit === "number" ? team.slice(0, limit) : team;
   return (
     <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {team.map((m) => (
+      {members.map((m) => (
         <StaggerItem key={m.name}>
           <motion.div
             whileHover={{ y: -8 }}

@@ -281,12 +281,12 @@ function Statement() {
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
               Why Choose Mapsoft Technologies?
             </h1>
           </div>
 
-          <div className="space-y-5 text-base leading-relaxed text-slate-600 dark:text-slate-300 lg:pt-2">
+          <div className="space-y-5 text-base leading-relaxed text-muted-foreground lg:pt-2">
             <p>
               At Mapsoft Technologies, we combine technology, innovation, and
               industry expertise to deliver software solutions that help
@@ -305,7 +305,7 @@ function Statement() {
           </div>
         </div>
 
-        <h2 className="mt-20 text-3xl font-semibold tracking-tight">
+        <h2 className="mt-20 font-display text-3xl font-semibold tracking-tight">
           What Makes Us Different?
         </h2>
 
@@ -313,16 +313,16 @@ function Statement() {
           {differentiators.map((item, index) => (
             <div
               key={item.title}
-              className={`flex flex-col gap-5 border-t border-slate-200 pt-7 dark:border-slate-800 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse md:text-right" : ""
+              className={`flex flex-col gap-5 border-t border-border pt-7 md:flex-row md:items-start ${index % 2 === 1 ? "md:flex-row-reverse md:text-right" : ""
                 }`}
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-300 text-sm font-semibold dark:border-slate-700">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border text-sm font-semibold">
                 {index + 1}
               </div>
 
               <div className="max-w-3xl">
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 leading-relaxed text-slate-600 dark:text-slate-300">
+                <h3 className="font-display text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </div>
@@ -331,10 +331,10 @@ function Statement() {
         </div>
 
         <div className="mx-auto mt-20 max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="font-display text-3xl font-semibold tracking-tight">
             Our Commitment
           </h2>
-          <p className="mt-5 leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-5 leading-relaxed text-muted-foreground">
             At Mapsoft Technologies, your business goals are at the heart of
             everything we do. We strive to simplify complex processes, improve
             operational efficiency, enhance customer experiences, and create
@@ -571,7 +571,12 @@ function Home() {
 
       <Section>
         <SectionHeader kicker="Team" title="Meet Our Team" />
-        <TeamGrid />
+        <TeamGrid limit={3} />
+        <div className="mt-12 flex justify-center">
+          <CTAButton to="/team" variant="ghost">
+            View All Team Members
+          </CTAButton>
+        </div>
       </Section>
 
       <Faq />
