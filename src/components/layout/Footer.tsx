@@ -3,6 +3,17 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "luc
 import { company, footerServices, usefulLinks } from "@/data/site";
 import { Logo } from "./Logo";
 
+const socials = [
+  { label: "Twitter", href: "#", Icon: Twitter },
+  { label: "Facebook", href: "#", Icon: Facebook },
+  { label: "Instagram", href: "#", Icon: Instagram },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/mapsoft-technologies/home/?viewAsMember=true",
+    Icon: Linkedin,
+  },
+];
+
 export function Footer() {
   return (
     <footer className="grain-overlay relative border-t border-border/60 bg-card/40">
@@ -66,11 +77,13 @@ export function Footer() {
             Stay connected with Mapsoft Technologies for product news and updates.
           </p>
           <div className="flex gap-3">
-            {[Twitter, Facebook, Instagram, Linkedin].map((Icon, i) => (
+            {socials.map(({ label, href, Icon }) => (
               <a
-                key={i}
-                href="#"
-                aria-label="Social link"
+                key={label}
+                href={href}
+                aria-label={label}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
                 className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-colors hover:border-brand-2 hover:text-brand-2"
               >
                 <Icon className="size-4" />
